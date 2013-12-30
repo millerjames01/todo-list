@@ -32,7 +32,7 @@ object AssetHandler {
   def itemHtml(text: String): Html = 
     li.cls("item").attr("text" -> text)(
       text, 
-      span.cls("glyphicon glyphic-remove pull-right")
+      span.cls("glyphicon glyphicon-remove pull-right")
     )
     
   def addListHtml(index: Int): Html = 

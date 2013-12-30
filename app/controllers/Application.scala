@@ -79,8 +79,6 @@ object Application extends Controller {
         listManager.add(name) match {
           case Left(error) => Ok(error.get)
           case Right(valListMngr) => dataStore.addList(name, valListMngr.data) {
-              println(valListMngr.lists)
-              println()
               Ok(newToDoList.render(valListMngr.lists.length - 1))
           }
         } 
