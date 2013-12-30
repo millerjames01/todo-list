@@ -76,8 +76,6 @@ object Application extends Controller {
       (name, lists) => {
         val newToDoList = ToDoList(name, "")
         val listManager = ListManager(lists)
-        println(listManager.lists)
-        println()
         listManager.add(name) match {
           case Left(error) => Ok(error.get)
           case Right(valListMngr) => dataStore.addList(name, valListMngr.data) {
@@ -101,8 +99,6 @@ object Application extends Controller {
         listManager.remove(name) match {
           case Left(error) => Ok(error.get)
           case Right(valListMngr) => dataStore.removeList(name, valListMngr.data) {
-            println(valListMngr.lists)
-            println()
             val index = Integer.parseInt(indexString)
             val listsLength = valListMngr.lists.length
             if(listsLength == 0) Ok(addListHtml(0))
