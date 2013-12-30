@@ -4,3 +4,13 @@
 
 # Home page
 GET     /                           controllers.Application.index
+
+POST     /addItem					controllers.Application.add
+POST	 /removeItem				controllers.Application.remove
+POST	 /addList					controllers.Application.addList
+POST	 /removeList				controllers.Application.removeList
+POST	 /next						controllers.Application.nextData
+POST	 /goToAddList				controllers.Application.goToAddList
+
+# Get assets
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

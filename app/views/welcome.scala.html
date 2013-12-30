@@ -1,0 +1,24 @@
+@* welcome Template File *@
+@(currentList: Option[structures.ToDoList], scripts: List[Html])(implicit request: Request[_])
+
+@import play.api.mvc._
+@import structures.ToDoList._
+@import structures._
+@import util.AssetHandler
+
+@main("Manage your To-Do Lists", scripts) {
+  <div id="welcome" class="jumbotron">
+    <h1 id="title">Organize in To-Do Lists</h1>
+    <button id="start" class="btn btn-large btn-info">Start managing your time effectively!</button>
+  </div>
+  <div class="list-pane hero-unit">
+    @currentList match {
+    	case None => {
+     	  @AssetHandler.addListHtml(0)
+    	}
+    	case Some(list) => {
+      	  @list.render(0)
+      	}
+    }
+  </div>
+}

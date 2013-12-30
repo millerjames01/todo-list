@@ -1,0 +1,74 @@
+body {
+  background-color: #D2F9FA;
+  overflow: hidden;
+}
+
+#welcome {
+  background-color: #FAFAFA;
+  text-align: center;
+}
+
+.list-pane {
+  position: absolute;
+  top: 200%;
+  display: none;
+  width: 70%;
+}
+
+#add-list-window {
+	text-align: center;
+	margin-bottom: 10%;
+	background-color: #FFF;
+	margin-top: 20%;
+}
+
+#list-name {
+	line-height: 50px;
+	height: 100%;
+	font-size: 20px;
+}
+
+#addListButton {
+	height: 50px;
+}
+
+.container {
+  width: 70%;
+  padding-top: 15%;
+}
+
+.to-do-window {
+	background-color: #FFF;
+	margin-top: 5%;
+	margin-bottom:5px;
+}
+
+.list-title {
+	text-align: center;
+	border-bottom: 1px solid #333;
+}
+
+.input-group {
+	width: 100%;
+	text-align: center;
+}
+
+ul {
+	margin-bottom: 0px;
+}
+
+#add-input {
+	width: 100%;
+}
+
+.help-info {
+	text-align: center;
+	color: #333;
+	font-size:12px;
+}
+
+.glyphicon {
+	top: 10px;
+	height: 0px;
+	overflow: hidden;
+}

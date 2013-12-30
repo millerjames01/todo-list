@@ -1,0 +1,23 @@
+@* main Template File *@
+@(title: String, scripts: Seq[Html] = Nil)(content: Html)
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>@title</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/main.css")">
+    <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+    <script src="@routes.Assets.at("javascripts/jquery-1.10.2.min.js")" type="text/javascript"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    @for(script <- scripts) {
+      @script
+    }
+  </head>
+  <body>    
+    <div class="container">
+      @content
+    </div>
+  </body>
+</html>

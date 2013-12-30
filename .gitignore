@@ -15,7 +15,8 @@ dist
 /.settings
 *.db
 bin
-
+.settings
+.classpath
 /.target
 .cache
 
